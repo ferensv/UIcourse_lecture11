@@ -1,0 +1,19 @@
+<div id="d">
+	<button onmouseover="on(event)" onmouseout="off(event)" id="b">click me!</button>
+</div>
+
+<form action="script.php">
+<input name="asd">
+<input type="submit">
+</form>
+<!--observer pattern implementation-->
+<script>
+/*function on (e){e.currentTarget.style.color='red';}
+function off (e){e.currentTarget.style.color='black';}
+
+document.getElementById("b").onmouseover=on;
+document.getElementById("b").onmouseout=out;*/
+
+document.getElementById("b").addEventListener('mouseover', function(e){e.currentTarget.style.color='green';})
+document.getElementById("b").addEventListener('mouseout', function(e){e.currentTarget.style.color='red';})
+</script>
